@@ -7,5 +7,9 @@ COPY . /app
 # Définir le répertoire de travail dans le container
 WORKDIR /app
 
+RUN npm install
+
 # Commande exécutée au lancement du container
 CMD ["node", "server.js"]
+
+EXPOSE 8000
