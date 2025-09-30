@@ -1,0 +1,27 @@
+name: Build Node.js project
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: deploy railway
+        uses: bervProject/railway-deploy@main
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_TOKEN }}
+        with:
+          service: "angelic-perception"
+
+      - name: deploy vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_AUTH_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG}}
+          vercel-project-id: ${{ secrets.VERCEL_SITE_ID}}
