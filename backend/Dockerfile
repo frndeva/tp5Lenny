@@ -8,4 +8,4 @@ COPY . /app
 WORKDIR /app
 
 # Commande exécutée au lancement du container
-CMD ["node", "server.js"];
+CMD ["node", "server.js"]
