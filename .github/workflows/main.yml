@@ -25,3 +25,4 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_AUTH_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG}}
           vercel-project-id: ${{ secrets.VERCEL_SITE_ID}}
+          working-directory: frontend

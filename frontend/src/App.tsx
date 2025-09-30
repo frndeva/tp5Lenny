@@ -98,7 +98,7 @@ function App() {
       {/* Barre de navigation */}
       <Navbar bg="primary" variant="dark" className="mb-4">
         <Container>
-          <Navbar.Brand>📝 Gestionnaire de Tasks</Navbar.Brand>
+          <Navbar.Brand>📝 Tasks</Navbar.Brand>
           <Button 
             variant="light" 
             onClick={handleCreateTask}
