@@ -12,4 +12,4 @@ RUN npm install
 # Commande exécutée au lancement du container
 CMD ["node", "server.js"]
 
-EXPOSE 8000
+EXPOSE 8080
