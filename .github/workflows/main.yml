@@ -20,9 +20,9 @@ jobs:
           service: "tp5Lenny"
 
       - name: deploy vercel
+        working-directory: frontend
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_AUTH_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG}}
           vercel-project-id: ${{ secrets.VERCEL_SITE_ID}}
-          working-directory: frontend
